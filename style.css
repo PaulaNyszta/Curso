@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#parrafo {
+    background-color: red;
+    width: 800px;
+    height: 200px;
+}
+/*
+:root{ //raiz
+    font-size: 50px; //q define todo
+}
+*/
+h1{
+    font-size: 5vw; /*5% del ancho del viewport*/
+}
+h2{
+    font-size: 4vh; /*4% del largo del viewport*/
+}
+h3{
+    font-size: 0.5rem;
+}
