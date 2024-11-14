@@ -1,24 +1,373 @@
-*{
-    margin: 0;
-    padding: 0;
+body {
+    background-color: #325343;
+}
+#header {
+    margin: -10px;
+    height: 64px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+}
+.imagen_logo {
+    width: 180px;
+    height: auto;
 }
 
-#parrafo {
-    background-color: red;
-    width: 800px;
-    height: 200px;
+
+#menu {
+   
+    list-style: none;
+    justify-content: flex-start;
+    align-content: flex-end;
+    margin-left: auto;
+    margin-right: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-/*
-:root{ //raiz
-    font-size: 50px; //q define todo
+.elemento_menu {
+    list-style: none;
+    float: left;
 }
-*/
-h1{
-    font-size: 5vw; /*5% del ancho del viewport*/
+.elemento_menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 20px;
+    margin-left: 1cm;
 }
-h2{
-    font-size: 4vh; /*4% del largo del viewport*/
+.elemento_menu a:hover {
+    border-bottom: 5px solid #fff7d9;  
 }
-h3{
-    font-size: 0.5rem;
+.elemento_menu_submenu {
+    list-style: none;
+    float: left;
+}
+.elemento_menu_submenu a {
+
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 20px;
+    margin-left: 1cm;
+}
+.elemento_menu_submenu a:hover{
+    border-bottom: 5px solid #fff7d9;  
+}
+
+.elemento_submenu {
+    display: none; 
+    background-color: #81998d; 
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px;
+    list-style: none;
+    width: 7cm;
+    position: absolute;
+}
+
+.elemento_submenu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.elemento_submenu li a:hover{
+    color: rgb(208, 207, 207);
+}
+.elemento_menu_submenu:hover .elemento_submenu{
+    display: block;
+}
+
+
+
+.main {
+    background-color: #325343;
+}
+.portada {
+    margin-top: 1.5cm;
+}
+.texto_portada {
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.1cm;
+}
+.texto_portada2 {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.1cm;
+    margin-top: -0.5cm;
+}
+
+.grid_terapias {
+    display: grid;
+    grid-template-columns: repeat(3, 8cm);
+
+    grid-template-rows: repeat(2, 6cm);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 15cm;
+    row-gap: 2cm;
+}
+.img_terapias {
+   height: 7cm;
+   width: 7cm;
+   padding: 0px;
+   margin: 0px;
+   object-fit: cover;
+   border-radius: 10px;
+}
+.img_terapias:hover {
+    border:solid white;
+    cursor:pointer;
+}
+
+
+#QuienSoy {
+    margin-top: 3cm;
+}
+.titulo {
+    padding-top: 1cm;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.1cm;
+}
+#grid_quiensoy {
+    display: grid;
+    grid-template-columns: repeat(2, 8cm);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+
+}
+#img_quiensoy {
+    height: 7cm;
+    padding: 0px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 0 1cm 0;
+
+}
+.parrafo_quiensoy {
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0 10cm 1cm 10cm;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+#Contacto {
+    width: 100%;
+    margin: 2cm 0 0 0;
+    padding: 0px;
+
+}
+.parrafo_contacto {
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+form {
+    display: flex;
+   align-items: center;
+    flex-direction: column;
+}
+input {
+    display:block
+}
+textarea {
+    display: block;
+    text-align: center;
+}
+.texto_forms {
+    font-family: sans-serif ;
+    color: white;
+    text-align: center;
+}
+.boton_forms {
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    #Contacto {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        width: 100vw;
+    }
+    textarea {
+        width: 7.5cm;
+    }
+    .texto_forms {
+        font-size: 0.5cm;
+    }
+    .boton_forms {
+        font-size: 16px;
+    }
+    .titulo {
+        padding-top: 1cm;
+        color: white;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 2.5rem;
+        font-weight: 300;
+        letter-spacing: 0.1cm;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #Contacto {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+    .titulo {
+       
+        color: white;
+        text-align: center;
+        font-family: sans-serif;
+        padding: 0px;
+        letter-spacing: 0.1cm;
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 0.1cm;
+    }
+    textarea {
+        width: 6.5cm;
+    }
+    .texto_forms {
+        padding-top: 0.2cm;
+    }
+    .boton_forms {
+        font-size: 10px;
+        margin-top: 0.2cm;
+    }
+}
+@media only screen and (min-width: 768px) {
+   
+    .titulo {
+       
+        color: white;
+        text-align: center;
+        font-family: sans-serif;
+        padding: 0px;
+        letter-spacing: 0.1cm;
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 0.1cm;
+    }
+    textarea {
+        width: 6.5cm;
+    }
+    .parrafo_contacto {
+        margin: 0 2cm 0 2cm ;
+    }
+    .texto_forms {
+        padding-top: 0.2cm;
+       
+    }
+    .boton_forms {
+        font-size: 10px;
+        margin-top: 0.2cm;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+  
+    .titulo {
+       
+        color: white;
+        text-align: center;
+        font-family: sans-serif;
+        padding: 0px;
+        letter-spacing: 0.1cm;
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 0.1cm;
+    }
+    textarea {
+        width: 6.5cm;
+    }
+    .parrafo_contacto {
+        margin: 0 2cm 0 2cm ;
+    }
+    .texto_forms {
+        padding-top: 0.2cm;
+       
+    }
+    .boton_forms {
+        font-size: 10px;
+        margin-top: 0.2cm;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+   
+    .titulo {
+       
+        color: white;
+        text-align: center;
+        font-family: sans-serif;
+        padding: 0px;
+        letter-spacing: 0.1cm;
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 0.1cm;
+    }
+    textarea {
+        width: 6.5cm;
+    }
+    .parrafo_contacto {
+        margin: 0 2cm 0 2cm ;
+    }
+    .texto_forms {
+        padding-top: 0.2cm;
+       
+    }
+    .boton_forms {
+        font-size: 13px;
+        margin-top: 0.2cm;
+        width: 2cm;
+        height: 0.5cm;
+
+    }
+}
+
+
+
+
+
+
+footer {
+    background-color: beige;
+    height: 2cm;
+    margin: 2cm 0 0 0;
+    padding: 0px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.logo_footer {
+    width: 5cm;
 }
